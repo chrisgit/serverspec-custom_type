@@ -56,6 +56,32 @@ Or for multiple custom types
 Dir['c:/serverspec/custom/*.rb'].each {|f| require f}
 ````
 
+In your spec file instead of using the generic command to describe task
+````
+describe command('schtasks /query /fo LIST /tn "<name_of_task>"') do
+  its(:stdout) { should contain '<name_of_task>' }
+end
+````
+
+You can use the schedule_task method
+````
+describe 'Scheduled Tasks' do
+  describe schedule_task('<name_of_task>') do
+    it { should exist }
+  end
+end
+````
+
+Other methods supplied are #stdout, #taskname (includes folder), #task_to_run, #author, #run_as_user but you could easily add more.
+
+````
+describe 'Scheduled Tasks' do
+  describe schedule_task('<name_of_task>') do
+    its(:task_to_run) { should contain 'myscript.vbs' }
+  end
+end
+````
+
 Contributing
 ------------
 Fork or branch this cookbook, add code (and tests where applicable), issue pull request.
