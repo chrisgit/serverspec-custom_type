@@ -89,3 +89,5 @@ Fork or branch this cookbook, add code (and tests where applicable), issue pull 
 License and Authors
 -------------------
 Authors: Chris Sullivan
+
+MIT - see the accompanying [LICENSE](https://github.com/chrisgit/serverspec-custom_type/LICENSE) file for details.

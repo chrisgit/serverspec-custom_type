@@ -1,4 +1,4 @@
-name 'custom_type'
+name 'serverspec_custom_type'
 maintainer 'Chris Sullivan'
 maintainer_email ''
 license 'All rights reserved'

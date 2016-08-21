@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: custom_type
+# Cookbook Name:: serverspec_custom_type
 # Recipe:: default
 #
-# Copyright 2015, Chris Sullivan
+# Copyright 2016, Chris Sullivan
 #
 # All rights reserved - Do Not Redistribute
 #
