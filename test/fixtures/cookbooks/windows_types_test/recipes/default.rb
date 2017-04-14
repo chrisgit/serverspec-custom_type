@@ -1,0 +1,2 @@
+include_recipe 'windows_types_test::create_schedule_task'
+include_recipe 'windows_types_test::create_firewall_rule'

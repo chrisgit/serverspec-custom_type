@@ -1,5 +1,5 @@
 require 'spec_helper'
-require './spec/support/schedule_task'
+require 'support/schedule_task'
 
 set :backend, :cmd
 set :os, :family => 'windows'

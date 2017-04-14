@@ -1,0 +1,30 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 12.17.44
+  retry_on_exit_code:
+    - 35 # 35 is the exit code signaling that the node is rebooting
+  max_retries: 1
+  client_rb:
+    exit_status: :enabled
+    client_fork: false
+
+platforms:
+  - name: windows2012r2
+    driver:
+      box: opentable/win-2012r2-standard-amd64-nocm
+      customize:
+        memory: '2048'
+        cpus: '2'
+        vram: '32'
+        clipboard: bidirectional
+        draganddrop: bidirectional
+
+suites:
+- name: default
+  run_list:
+    - recipe[windows_types_test]
+  attributes:
